@@ -1,0 +1,2572 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HarbourStone Advisory & Accounting helps Australian businesses with tax, BAS, bookkeeping, payroll, SMSF, audit, advisory and virtual CFO support." />
+  <title>HarbourStone Advisory & Accounting | Australian Accounting Firm</title>
+
+  <style>
+    :root {
+      --navy: #09233f;
+      --navy-2: #0d315a;
+      --ink: #142033;
+      --muted: #64748b;
+      --line: #dbe5ef;
+      --cloud: #f5f8fb;
+      --white: #ffffff;
+      --teal: #13b5a6;
+      --teal-dark: #0b8c82;
+      --gold: #f5b84b;
+      --orange: #ff7a59;
+      --green: #14a76c;
+      --shadow: 0 22px 65px rgba(9, 35, 63, 0.14);
+      --shadow-soft: 0 16px 35px rgba(9, 35, 63, 0.09);
+      --radius: 28px;
+      --radius-sm: 18px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 36px, var(--max));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 96px 0;
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding: 8px 13px;
+      color: var(--teal-dark);
+      background: rgba(19, 181, 166, 0.12);
+      border: 1px solid rgba(19, 181, 166, 0.2);
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--teal);
+      box-shadow: 0 0 0 6px rgba(19, 181, 166, 0.15);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 46px;
+    }
+
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      line-height: 1.06;
+      color: var(--navy);
+      letter-spacing: -0.045em;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 850;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      color: var(--navy);
+      background: linear-gradient(135deg, var(--gold), #ffe08a);
+      box-shadow: 0 16px 35px rgba(245, 184, 75, 0.32);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 20px 45px rgba(245, 184, 75, 0.42);
+    }
+
+    .btn-secondary {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.11);
+      backdrop-filter: blur(14px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .btn-dark {
+      color: var(--white);
+      background: var(--navy);
+      box-shadow: 0 15px 35px rgba(9, 35, 63, 0.25);
+    }
+
+    .btn-light {
+      color: var(--navy);
+      background: var(--white);
+      border-color: var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(219, 229, 239, 0.78);
+      backdrop-filter: blur(18px);
+    }
+
+    .top-strip {
+      color: rgba(255, 255, 255, 0.9);
+      background: var(--navy);
+      font-size: 0.88rem;
+    }
+
+    .top-strip .container {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .top-strip .top-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-wrap {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: max-content;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      font-weight: 950;
+      letter-spacing: -0.08em;
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      box-shadow: 0 12px 30px rgba(19, 181, 166, 0.24);
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--navy);
+      line-height: 1.05;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      display: inline-flex;
+      padding: 10px 12px;
+      color: #30445f;
+      border-radius: 999px;
+      font-size: 0.94rem;
+      font-weight: 800;
+      transition: color 0.25s ease, background 0.25s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--navy);
+      background: var(--cloud);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .phone-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .phone-pill span {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(19, 181, 166, 0.12);
+      color: var(--teal-dark);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 5px auto;
+      background: var(--navy);
+      border-radius: 999px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .hero {
+      min-height: 860px;
+      padding: 86px 0 70px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 10% 12%, rgba(19, 181, 166, 0.36), transparent 26%),
+        radial-gradient(circle at 82% 20%, rgba(245, 184, 75, 0.28), transparent 26%),
+        linear-gradient(135deg, rgba(9, 35, 63, 0.96), rgba(7, 54, 84, 0.92)),
+        url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=80") center/cover;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -28% -10%;
+      height: 320px;
+      background: var(--white);
+      border-radius: 50% 50% 0 0;
+      z-index: 0;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(350px, 0.95fr);
+      gap: 52px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      padding-top: 10px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      padding: 9px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.91rem;
+      font-weight: 800;
+    }
+
+    .hero-badge span {
+      color: var(--gold);
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      font-size: clamp(2.7rem, 6vw, 5.75rem);
+      line-height: 0.94;
+      letter-spacing: -0.065em;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-lead {
+      max-width: 670px;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: clamp(1.06rem, 2vw, 1.28rem);
+      margin-bottom: 34px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 36px 0 0;
+      max-width: 760px;
+    }
+
+    .hero-point {
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-point strong {
+      display: block;
+      color: var(--white);
+      font-size: 1.04rem;
+      margin-bottom: 3px;
+    }
+
+    .hero-point span {
+      display: block;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 650px;
+    }
+
+    .dashboard-card {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 480px);
+      margin-left: auto;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(22px);
+      box-shadow: 0 35px 95px rgba(0, 0, 0, 0.28);
+      overflow: hidden;
+    }
+
+    .dashboard-img {
+      height: 258px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .dashboard-body {
+      padding: 26px;
+    }
+
+    .mini-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mini-label .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: #d6fff9;
+      background: rgba(19, 181, 166, 0.2);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .mini-label .status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #38f2d5;
+    }
+
+    .dashboard-card h3 {
+      font-size: 1.65rem;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      letter-spacing: -0.03em;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .metric {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .metric span {
+      display: block;
+      color: rgba(255, 255, 255, 0.66);
+      font-size: 0.8rem;
+      margin-bottom: 4px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.46rem;
+      letter-spacing: -0.04em;
+    }
+
+    .task-list {
+      display: grid;
+      gap: 11px;
+      margin-top: 19px;
+    }
+
+    .task-list div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.95rem;
+    }
+
+    .tick {
+      flex: 0 0 auto;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      background: var(--gold);
+      font-weight: 950;
+      font-size: 0.82rem;
+    }
+
+    .floating-card {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      bottom: 52px;
+      width: 262px;
+      padding: 20px;
+      border-radius: 24px;
+      color: var(--navy);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 2.2rem;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 8px;
+    }
+
+    .floating-card p {
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+
+    .floating-card .bar {
+      height: 9px;
+      border-radius: 999px;
+      background: var(--cloud);
+      overflow: hidden;
+      margin-top: 16px;
+    }
+
+    .floating-card .bar span {
+      display: block;
+      width: 83%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--teal), var(--gold));
+    }
+
+    .trust-strip {
+      position: relative;
+      z-index: 3;
+      margin-top: -70px;
+    }
+
+    .trust-card {
+      display: grid;
+      grid-template-columns: 1.1fr repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .trust-item {
+      padding: 26px;
+      background: var(--white);
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.65rem;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+    }
+
+    .trust-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.45;
+    }
+
+    .trust-intro strong {
+      font-size: 1.22rem;
+      line-height: 1.2;
+    }
+
+    .problems {
+      background:
+        radial-gradient(circle at 9% 15%, rgba(19, 181, 166, 0.11), transparent 25%),
+        linear-gradient(180deg, #ffffff, #f7fbff);
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .problem-card {
+      position: relative;
+      min-height: 275px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .problem-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .problem-card::after {
+      content: attr(data-number);
+      position: absolute;
+      right: 18px;
+      top: 8px;
+      color: rgba(9, 35, 63, 0.06);
+      font-size: 5.8rem;
+      font-weight: 950;
+      letter-spacing: -0.08em;
+      line-height: 1;
+    }
+
+    .icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--teal), var(--navy-2));
+      box-shadow: 0 14px 25px rgba(19, 181, 166, 0.2);
+      font-weight: 950;
+      font-size: 1.2rem;
+    }
+
+    .problem-card h3,
+    .service-card h3,
+    .industry-card h3,
+    .package h3 {
+      color: var(--navy);
+      font-size: 1.24rem;
+      line-height: 1.22;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+    }
+
+    .problem-card p,
+    .service-card p,
+    .industry-card p,
+    .package p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .image-stack {
+      position: relative;
+    }
+
+    .image-stack .main-img {
+      width: 100%;
+      height: 640px;
+      object-fit: cover;
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .image-stack .small-img {
+      position: absolute;
+      right: -20px;
+      bottom: -28px;
+      width: 44%;
+      min-width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border: 9px solid var(--white);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 16px;
+      margin: 30px 0 34px;
+    }
+
+    .feature-row {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 15px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--white);
+      box-shadow: 0 12px 26px rgba(9, 35, 63, 0.06);
+    }
+
+    .feature-row .check {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      background: rgba(245, 184, 75, 0.3);
+      font-weight: 950;
+    }
+
+    .feature-row h3 {
+      color: var(--navy);
+      font-size: 1.06rem;
+      margin-bottom: 4px;
+    }
+
+    .feature-row p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .services {
+      background: var(--navy);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .services::before {
+      content: "";
+      position: absolute;
+      inset: -160px -140px auto auto;
+      width: 420px;
+      height: 420px;
+      border-radius: 999px;
+      background: rgba(19, 181, 166, 0.24);
+      filter: blur(20px);
+    }
+
+    .services .section-heading h2,
+    .services .section-heading p {
+      color: var(--white);
+    }
+
+    .services .section-heading p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .services-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .service-highlight {
+      position: sticky;
+      top: 124px;
+      border-radius: 34px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-highlight img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .service-highlight-content {
+      padding: 28px;
+    }
+
+    .service-highlight-content h3 {
+      font-size: 1.55rem;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      letter-spacing: -0.035em;
+    }
+
+    .service-highlight-content p {
+      color: rgba(255, 255, 255, 0.72);
+      margin-bottom: 20px;
+    }
+
+    .service-highlight-content ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .service-highlight-content li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.45;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      min-height: 260px;
+      padding: 26px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .service-card .icon-box {
+      background: linear-gradient(135deg, var(--gold), var(--orange));
+      color: var(--navy);
+    }
+
+    .service-card h3 {
+      color: var(--white);
+    }
+
+    .service-card p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .service-tags span {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 0.79rem;
+      font-weight: 800;
+    }
+
+    .numbers {
+      padding: 70px 0;
+      background: var(--cloud);
+    }
+
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .number-card {
+      padding: 28px;
+      border-radius: 26px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .number-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      margin-bottom: 10px;
+    }
+
+    .number-card span {
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      counter-reset: step;
+    }
+
+    .process-card {
+      position: relative;
+      padding: 30px 24px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .process-card::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 26px;
+      border-radius: 16px;
+      color: var(--navy);
+      background: linear-gradient(135deg, rgba(245, 184, 75, 0.95), rgba(255, 224, 138, 0.95));
+      font-weight: 950;
+    }
+
+    .process-card h3 {
+      color: var(--navy);
+      font-size: 1.16rem;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .tech {
+      background:
+        linear-gradient(135deg, rgba(9, 35, 63, 0.94), rgba(9, 35, 63, 0.75)),
+        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=80") center/cover;
+      color: var(--white);
+    }
+
+    .tech-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 42px;
+      align-items: center;
+      padding: 44px;
+      border-radius: 36px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.23);
+    }
+
+    .tech-panel h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin-bottom: 18px;
+    }
+
+    .tech-panel p {
+      color: rgba(255, 255, 255, 0.74);
+      margin-bottom: 28px;
+    }
+
+    .software-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .software-card {
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      min-height: 122px;
+    }
+
+    .software-card strong {
+      display: block;
+      font-size: 1.12rem;
+      margin-bottom: 6px;
+    }
+
+    .software-card span {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+
+    .industries {
+      background: #fbfdff;
+    }
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .industry-card {
+      padding: 28px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .industry-card .icon-box {
+      color: var(--navy);
+      background: rgba(245, 184, 75, 0.28);
+      box-shadow: none;
+    }
+
+    .packages-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .package {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .package.featured {
+      color: var(--white);
+      background: linear-gradient(155deg, var(--navy), #0a5a73 72%, var(--teal-dark));
+      border-color: rgba(255, 255, 255, 0.12);
+      transform: translateY(-12px);
+      box-shadow: 0 30px 75px rgba(9, 35, 63, 0.25);
+    }
+
+    .package.featured h3,
+    .package.featured .price,
+    .package.featured li {
+      color: var(--white);
+    }
+
+    .package.featured p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .package .label {
+      align-self: flex-start;
+      margin-bottom: 20px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: var(--teal-dark);
+      background: rgba(19, 181, 166, 0.12);
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .package.featured .label {
+      color: var(--navy);
+      background: var(--gold);
+    }
+
+    .price {
+      color: var(--navy);
+      font-size: 2.45rem;
+      font-weight: 950;
+      letter-spacing: -0.06em;
+      line-height: 1;
+      margin: 18px 0 6px;
+    }
+
+    .price small {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .package.featured .price small {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .package ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin: 28px 0 30px;
+    }
+
+    .package li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #43566e;
+      line-height: 1.42;
+    }
+
+    .package .btn {
+      margin-top: auto;
+    }
+
+    .case-study {
+      background: var(--cloud);
+    }
+
+    .case-card {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      overflow: hidden;
+      border-radius: 36px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .case-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+    }
+
+    .case-content {
+      padding: clamp(32px, 6vw, 58px);
+    }
+
+    .quote-mark {
+      width: 64px;
+      height: 64px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      background: var(--gold);
+      font-size: 2rem;
+      font-weight: 950;
+      margin-bottom: 28px;
+    }
+
+    .case-content h2 {
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin-bottom: 18px;
+    }
+
+    .case-content p {
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-size: 1.04rem;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .result {
+      padding: 18px;
+      border-radius: 20px;
+      background: var(--cloud);
+    }
+
+    .result strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.65rem;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 8px;
+    }
+
+    .result span {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.35;
+      display: block;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .testimonial {
+      padding: 28px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .testimonial p {
+      color: #34445b;
+      margin-bottom: 22px;
+    }
+
+    .person {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--teal), var(--navy));
+      color: var(--white);
+      font-weight: 950;
+    }
+
+    .person strong {
+      display: block;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .person span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .faq-contact {
+      background:
+        radial-gradient(circle at 88% 8%, rgba(245, 184, 75, 0.14), transparent 24%),
+        linear-gradient(180deg, #ffffff, #f6fbff);
+    }
+
+    .faq-contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--white);
+      box-shadow: 0 10px 26px rgba(9, 35, 63, 0.06);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px 22px;
+      border: 0;
+      background: transparent;
+      color: var(--navy);
+      font-weight: 900;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-question span {
+      flex: 1;
+    }
+
+    .faq-question .plus {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: var(--cloud);
+      color: var(--teal-dark);
+      font-weight: 950;
+      transition: transform 0.25s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.28s ease;
+    }
+
+    .faq-answer p {
+      padding: 0 22px 22px;
+      color: var(--muted);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 220px;
+    }
+
+    .faq-item.active .plus {
+      transform: rotate(45deg);
+    }
+
+    .contact-card {
+      border-radius: 34px;
+      background: var(--navy);
+      color: var(--white);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-head {
+      padding: 34px;
+      background:
+        linear-gradient(135deg, rgba(9, 35, 63, 0.7), rgba(9, 35, 63, 0.98)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80") center/cover;
+    }
+
+    .contact-head h2 {
+      font-size: clamp(1.85rem, 4vw, 2.8rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      margin-bottom: 12px;
+    }
+
+    .contact-head p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      padding: 28px;
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-size: 0.86rem;
+      font-weight: 900;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      min-height: 50px;
+      padding: 13px 14px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      color: var(--ink);
+      background: #fbfdff;
+      outline: none;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .field textarea {
+      min-height: 126px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 4px rgba(19, 181, 166, 0.12);
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .privacy-note {
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+
+    .location-band {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .location-item {
+      display: grid;
+      gap: 5px;
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .location-item strong {
+      color: var(--white);
+    }
+
+    .location-item span {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.94rem;
+    }
+
+    .cta {
+      padding: 86px 0;
+      background:
+        radial-gradient(circle at 12% 25%, rgba(19, 181, 166, 0.22), transparent 24%),
+        radial-gradient(circle at 85% 12%, rgba(245, 184, 75, 0.28), transparent 22%),
+        var(--navy);
+      color: var(--white);
+    }
+
+    .cta-card {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 24px;
+      align-items: center;
+      padding: 48px;
+      border-radius: 36px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
+    }
+
+    .cta-card h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      margin-bottom: 16px;
+    }
+
+    .cta-card p {
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 760px;
+    }
+
+    .cta-actions {
+      display: grid;
+      gap: 14px;
+      justify-items: stretch;
+    }
+
+    .site-footer {
+      color: rgba(255, 255, 255, 0.72);
+      background: #06182b;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.25fr repeat(3, 1fr);
+      gap: 34px;
+      padding: 70px 0 44px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand .brand-text strong,
+    .footer-brand .brand-text span {
+      color: var(--white);
+    }
+
+    .footer-brand p {
+      margin-top: 18px;
+      max-width: 390px;
+    }
+
+    .footer-col h3 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-col a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 26px 0;
+      font-size: 0.92rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .nav-menu,
+      .nav-actions .phone-pill,
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .site-header.menu-open .nav-menu {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        top: calc(100% + 8px);
+        display: grid;
+        gap: 6px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .site-header.menu-open .nav-menu a {
+        width: 100%;
+        justify-content: center;
+        padding: 13px 16px;
+      }
+
+      .site-header.menu-open .menu-toggle span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      .site-header.menu-open .menu-toggle span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .site-header.menu-open .menu-toggle span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      .hero-grid,
+      .split,
+      .services-layout,
+      .tech-panel,
+      .case-card,
+      .faq-contact-grid,
+      .cta-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .dashboard-card {
+        margin: 0;
+        width: 100%;
+      }
+
+      .floating-card {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: 18px;
+      }
+
+      .service-highlight {
+        position: relative;
+        top: auto;
+      }
+
+      .trust-card {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-intro {
+        grid-column: 1 / -1;
+      }
+
+      .problem-grid,
+      .industry-grid,
+      .testimonials-grid,
+      .packages-wrap {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid,
+      .numbers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .top-strip .container {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .top-strip .top-links {
+        display: none;
+      }
+
+      .brand-text strong {
+        font-size: 0.98rem;
+      }
+
+      .brand-text span {
+        font-size: 0.7rem;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 64px 0 110px;
+      }
+
+      .hero-points,
+      .problem-grid,
+      .services-grid,
+      .industry-grid,
+      .packages-wrap,
+      .process-grid,
+      .numbers-grid,
+      .testimonials-grid,
+      .software-grid,
+      .location-band,
+      .result-grid,
+      .form-grid,
+      .trust-card,
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .package.featured {
+        transform: none;
+      }
+
+      .image-stack .main-img {
+        height: 460px;
+      }
+
+      .image-stack .small-img {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 220px;
+        min-width: 0;
+        margin-top: 16px;
+        border: 0;
+      }
+
+      .tech-panel,
+      .cta-card {
+        padding: 28px;
+      }
+
+      .case-card img {
+        min-height: 340px;
+      }
+
+      .footer-bottom {
+        display: grid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="top-strip">
+      <div class="container">
+        <p>Australian accounting, tax and advisory support for growing businesses.</p>
+        <div class="top-links">
+          <a href="mailto:hello@harbourstoneadvisory.com.au">hello@harbourstoneadvisory.com.au</a>
+          <a href="tel:+61391234588">+61 3 9123 4588</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="HarbourStone home">
+        <span class="brand-mark">HS</span>
+        <span class="brand-text">
+          <strong>HarbourStone</strong>
+          <span>Advisory &amp; Accounting</span>
+        </span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#problems">Issues We Fix</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#pricing">Plans</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="phone-pill" href="tel:+61391234588"><span>☎</span> +61 3 9123 4588</a>
+        <a class="btn btn-dark" href="#contact">Book a Call</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="hero-badge"><span>●</span> Fixed-fee accounting with clear monthly guidance</div>
+          <h1>Accounting that turns tax pressure into <span>business clarity.</span></h1>
+          <p class="hero-lead">HarbourStone Advisory &amp; Accounting helps Australian business owners stay compliant, understand cash flow, meet ATO deadlines and make confident decisions without the usual spreadsheet chaos.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#contact">Get a Free Clarity Call</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
+          </div>
+
+          <div class="hero-points" aria-label="Key benefits">
+            <div class="hero-point">
+              <strong>No surprise bills</strong>
+              <span>Clear fixed-fee options for predictable accounting support.</span>
+            </div>
+            <div class="hero-point">
+              <strong>ATO-ready records</strong>
+              <span>BAS, GST, payroll and tax deadlines tracked before they become urgent.</span>
+            </div>
+            <div class="hero-point">
+              <strong>Real advice</strong>
+              <span>Monthly reporting, planning and practical next steps, not just annual lodgement.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <article class="dashboard-card" aria-label="Client dashboard preview">
+            <img class="dashboard-img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" alt="Accounting paperwork, laptop and calculator on a desk" />
+            <div class="dashboard-body">
+              <div class="mini-label">Client health snapshot <span class="status">Live</span></div>
+              <h3>Everything a business owner needs to know, before the deadline.</h3>
+              <div class="metric-grid">
+                <div class="metric">
+                  <span>BAS lodgement</span>
+                  <strong>Ready</strong>
+                </div>
+                <div class="metric">
+                  <span>Cash runway</span>
+                  <strong>5.8 mo</strong>
+                </div>
+                <div class="metric">
+                  <span>Tax provision</span>
+                  <strong>18%</strong>
+                </div>
+                <div class="metric">
+                  <span>Receivables</span>
+                  <strong>12 days</strong>
+                </div>
+              </div>
+              <div class="task-list">
+                <div><span class="tick">✓</span> Payroll reconciled and super obligations checked</div>
+                <div><span class="tick">✓</span> Director tax planning note sent</div>
+                <div><span class="tick">✓</span> GST review completed before quarter end</div>
+              </div>
+            </div>
+          </article>
+
+          <aside class="floating-card" aria-label="Client outcome">
+            <strong>83%</strong>
+            <p>of recurring client questions are answered before tax time through monthly reports and proactive reminders.</p>
+            <div class="bar"><span></span></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Firm credibility">
+      <div class="container">
+        <div class="trust-card reveal">
+          <div class="trust-item trust-intro">
+            <strong>Built for business owners who want faster answers and fewer compliance surprises.</strong>
+            <span>Dummy demo statistics for design presentation.</span>
+          </div>
+          <div class="trust-item">
+            <strong>12+</strong>
+            <span>service areas covered across tax, accounting and advisory</span>
+          </div>
+          <div class="trust-item">
+            <strong>24h</strong>
+            <span>target response time for monthly support clients</span>
+          </div>
+          <div class="trust-item">
+            <strong>ATO</strong>
+            <span>lodgement reminders and compliance calendar support</span>
+          </div>
+          <div class="trust-item">
+            <strong>Cloud</strong>
+            <span>Xero, MYOB and QuickBooks workflow support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section problems" id="problems">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Real issues we solve</span>
+          <h2>Most accounting problems start small, then become expensive at the worst time.</h2>
+          <p>Clients do not only need a tax return. They need a calm team that notices the warning signs early, explains the numbers clearly and keeps the business moving.</p>
+        </div>
+
+        <div class="problem-grid">
+          <article class="problem-card reveal" data-number="01">
+            <div class="icon-box">!</div>
+            <h3>Late BAS and GST stress</h3>
+            <p>Quarterly lodgements become stressful when receipts, bank feeds and GST coding are left until the final week. We keep records clean throughout the quarter.</p>
+          </article>
+          <article class="problem-card reveal" data-number="02">
+            <div class="icon-box">$</div>
+            <h3>Cash flow surprises</h3>
+            <p>Profit on paper does not always mean money in the bank. We help track receivables, expenses, tax provisions and cash runway in language owners understand.</p>
+          </article>
+          <article class="problem-card reveal" data-number="03">
+            <div class="icon-box">✓</div>
+            <h3>Payroll and super mistakes</h3>
+            <p>Incorrect award setup, late super and messy payroll journals can create risk. We review payroll workflows and help maintain accurate employee records.</p>
+          </article>
+          <article class="problem-card reveal" data-number="04">
+            <div class="icon-box">↻</div>
+            <h3>Outdated systems</h3>
+            <p>Manual spreadsheets, duplicated data entry and unreconciled bank feeds waste time. We modernise workflows with Xero, MYOB or QuickBooks Online.</p>
+          </article>
+          <article class="problem-card reveal" data-number="05">
+            <div class="icon-box">?</div>
+            <h3>Unclear advice</h3>
+            <p>Clients often leave meetings still unsure what to do next. We turn reports into simple actions: what to pay, what to save, what to fix and what to plan.</p>
+          </article>
+          <article class="problem-card reveal" data-number="06">
+            <div class="icon-box">▣</div>
+            <h3>Year-end panic</h3>
+            <p>Tax planning should not happen after 30 June. We review profit, deductions, stock, assets, director loans and structure options before year-end arrives.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split">
+        <div class="image-stack reveal">
+          <img class="main-img" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" alt="Professional advisory team discussing business reports" />
+          <img class="small-img" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Business advisor reviewing data on a laptop" />
+        </div>
+
+        <div class="reveal">
+          <span class="eyebrow">A better accounting relationship</span>
+          <div class="section-heading" style="margin-bottom: 0;">
+            <h2>We make the numbers useful before decisions are already made.</h2>
+            <p>HarbourStone is a modern Australian accounting firm designed for founders, family businesses, professional services, trades and growing teams that want more than once-a-year compliance.</p>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-row">
+              <div class="check">✓</div>
+              <div>
+                <h3>Plain-English explanations</h3>
+                <p>No confusing accounting jargon. You get simple summaries, clear due dates and practical recommendations your team can act on.</p>
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="check">✓</div>
+              <div>
+                <h3>Proactive compliance calendar</h3>
+                <p>We map BAS, GST, payroll, super, tax and ASIC-related milestones so deadlines are visible and manageable.</p>
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="check">✓</div>
+              <div>
+                <h3>Advisory built into the rhythm</h3>
+                <p>Monthly and quarterly reviews help business owners see margin changes, tax exposure, debtors, expenses and cash pressure early.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn btn-dark" href="#contact">Start With a Review</a>
+            <a class="btn btn-light" href="#process">See Our Process</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Accounting firm services</span>
+          <h2>Everything a modern business expects from its accounting partner.</h2>
+          <p>Use this service section to show breadth, trust and relevance for every type of accounting client searching for support online.</p>
+        </div>
+
+        <div class="services-layout">
+          <aside class="service-highlight reveal">
+            <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1100&q=80" alt="Close up of financial paperwork and calculator" />
+            <div class="service-highlight-content">
+              <h3>Your financial control room, all year round.</h3>
+              <p>From day-to-day bookkeeping to strategic tax planning, HarbourStone connects compliance, reporting and advice into one clear workflow.</p>
+              <ul>
+                <li><span class="tick">✓</span> Dedicated accountant and client manager</li>
+                <li><span class="tick">✓</span> Secure document collection and cloud file process</li>
+                <li><span class="tick">✓</span> Monthly insights for profit, cash flow and tax provisions</li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <div class="icon-box">TX</div>
+              <h3>Tax returns and tax planning</h3>
+              <p>Individual, company, trust and partnership returns with practical planning before 30 June to reduce last-minute pressure.</p>
+              <div class="service-tags"><span>Companies</span><span>Trusts</span><span>Individuals</span></div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon-box">BS</div>
+              <h3>BAS, GST and ATO lodgements</h3>
+              <p>Quarterly BAS preparation, GST coding checks, instalment activity statements, lodgement reminders and payment planning.</p>
+              <div class="service-tags"><span>BAS</span><span>GST</span><span>IAS</span></div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon-box">BK</div>
+              <h3>Bookkeeping and reconciliations</h3>
+              <p>Clean bank feeds, accurate coding, supplier bills, customer invoices, monthly close and management-ready reports.</p>
+              <div class="service-tags"><span>Xero</span><span>MYOB</span><span>QuickBooks</span></div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon-box">PY</div>
+              <h3>Payroll and superannuation</h3>
+              <p>Payroll setup, STP-ready processing, super payment reviews, leave balances, contractor checks and employee record support.</p>
+              <div class="service-tags"><span>STP</span><span>Super</span><span>Payroll</span></div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon-box">CF</div>
+              <h3>Virtual CFO and management reporting</h3>
+              <p>Monthly dashboards, budgets, forecasts, cash-flow reviews, KPI tracking and board-ready reporting for growing teams.</p>
+              <div class="service-tags"><span>Forecasts</span><span>KPI</span><span>Budgeting</span></div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon-box">AD</div>
+              <h3>Business advisory and structuring</h3>
+              <p>Entity setup, growth planning, pricing reviews, debt management, succession support and business improvement advice.</p>
+              <div class="service-tags"><span>Structure</span><span>Growth</span><span>Strategy</span></div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon-box">SM</div>
+              <h3>SMSF accounting and tax</h3>
+              <p>SMSF annual accounts, tax returns, contribution tracking, pension support and auditor-ready documentation packs.</p>
+              <div class="service-tags"><span>SMSF</span><span>Pension</span><span>Compliance</span></div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon-box">AU</div>
+              <h3>Audit and assurance support</h3>
+              <p>Audit-ready file preparation, internal control reviews, financial statement support and assurance coordination.</p>
+              <div class="service-tags"><span>Assurance</span><span>Controls</span><span>Reports</span></div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon-box">RG</div>
+              <h3>ASIC and company compliance</h3>
+              <p>Company annual statements, ASIC reminders, director changes, registered office support and record maintenance.</p>
+              <div class="service-tags"><span>ASIC</span><span>Companies</span><span>Records</span></div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon-box">CL</div>
+              <h3>Cloud accounting migration</h3>
+              <p>Move from spreadsheets or legacy software to clean cloud workflows with chart-of-accounts, bank rules and reporting setup.</p>
+              <div class="service-tags"><span>Migration</span><span>Setup</span><span>Training</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="numbers">
+      <div class="container numbers-grid">
+        <div class="number-card reveal">
+          <strong>3-way</strong>
+          <span>advice across tax, cash flow and operations</span>
+        </div>
+        <div class="number-card reveal">
+          <strong>30 Jun</strong>
+          <span>year-end planning before it is too late</span>
+        </div>
+        <div class="number-card reveal">
+          <strong>1 place</strong>
+          <span>for reports, tasks, documents and due dates</span>
+        </div>
+        <div class="number-card reveal">
+          <strong>100%</strong>
+          <span>plain-English explanations for every client</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Simple process</span>
+          <h2>A clear path from messy numbers to confident decisions.</h2>
+          <p>Every new client starts with a practical review. We find gaps, clean the workflow and set a rhythm that keeps your business ready.</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <h3>Discovery and risk review</h3>
+            <p>We review your current accounting file, tax position, payroll process, lodgement history and biggest business concerns.</p>
+          </article>
+          <article class="process-card reveal">
+            <h3>Clean-up and setup</h3>
+            <p>We fix coding, bank rules, chart-of-accounts issues, unpaid invoices, old balances and reporting gaps that block clarity.</p>
+          </article>
+          <article class="process-card reveal">
+            <h3>Monthly advice rhythm</h3>
+            <p>You receive concise reports, reminders and action items so tax, BAS, payroll and cash flow stay visible throughout the year.</p>
+          </article>
+          <article class="process-card reveal">
+            <h3>Planning and improvement</h3>
+            <p>We help plan tax, margins, pricing, hiring, finance, entity structure and growth decisions before they become urgent.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tech">
+      <div class="container">
+        <div class="tech-panel reveal">
+          <div>
+            <span class="eyebrow">Cloud accounting ready</span>
+            <h2>Modern systems make compliance easier and advice faster.</h2>
+            <p>We help clients remove manual spreadsheets, reduce duplicate work and build a clean monthly reporting process around the software they already use.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="#contact">Modernise My Workflow</a>
+              <a class="btn btn-secondary" href="#services">View Cloud Services</a>
+            </div>
+          </div>
+
+          <div class="software-grid" aria-label="Supported software">
+            <div class="software-card">
+              <strong>Xero</strong>
+              <span>Setup, clean-up, reporting, rules, payroll and app integrations.</span>
+            </div>
+            <div class="software-card">
+              <strong>MYOB</strong>
+              <span>File review, reconciliations, payroll and compliance workflows.</span>
+            </div>
+            <div class="software-card">
+              <strong>QuickBooks</strong>
+              <span>Chart setup, bank feeds, GST coding and monthly close process.</span>
+            </div>
+            <div class="software-card">
+              <strong>Hubdoc</strong>
+              <span>Receipt capture, bill collection and source document organisation.</span>
+            </div>
+            <div class="software-card">
+              <strong>Stripe</strong>
+              <span>Sales reconciliation, fees, invoices and e-commerce reporting.</span>
+            </div>
+            <div class="software-card">
+              <strong>Deputy</strong>
+              <span>Timesheets, rostering, payroll flow and employee cost visibility.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section industries" id="industries">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Industries we support</span>
+          <h2>Specialised advice for businesses with real operational pressure.</h2>
+          <p>Each industry has different margins, compliance risks and cash-flow patterns. The homepage content speaks directly to the problems clients search for.</p>
+        </div>
+
+        <div class="industry-grid">
+          <article class="industry-card reveal">
+            <div class="icon-box">PR</div>
+            <h3>Professional services</h3>
+            <p>Consultants, agencies, legal, design and technology firms that need project profitability, contractor reviews and clean management reports.</p>
+          </article>
+          <article class="industry-card reveal">
+            <div class="icon-box">TR</div>
+            <h3>Trades and construction</h3>
+            <p>Support for job costing, subcontractor checks, progress claims, equipment deductions, cash-flow timing and GST obligations.</p>
+          </article>
+          <article class="industry-card reveal">
+            <div class="icon-box">RT</div>
+            <h3>Retail and e-commerce</h3>
+            <p>Sales channel reconciliation, stock movement, merchant fees, payroll rostering and daily revenue visibility.</p>
+          </article>
+          <article class="industry-card reveal">
+            <div class="icon-box">HC</div>
+            <h3>Health and wellness</h3>
+            <p>Clinics, allied health, fitness and wellness operators that need payroll, GST, appointment revenue and contractor clarity.</p>
+          </article>
+          <article class="industry-card reveal">
+            <div class="icon-box">FM</div>
+            <h3>Family businesses</h3>
+            <p>Director drawings, succession planning, family payroll, asset purchases and practical governance for long-term stability.</p>
+          </article>
+          <article class="industry-card reveal">
+            <div class="icon-box">NP</div>
+            <h3>Not-for-profit and community</h3>
+            <p>Grant reporting, budget tracking, payroll compliance, acquittals, board reports and transparency for stakeholders.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Fixed-fee options</span>
+          <h2>Choose the level of support your business actually needs.</h2>
+          <p>Pricing below is dummy content for layout purposes. Replace with the firm pricing model, or change to quote-based packages.</p>
+        </div>
+
+        <div class="packages-wrap">
+          <article class="package reveal">
+            <span class="label">Starter</span>
+            <h3>Compliance Essentials</h3>
+            <p>For sole traders and small teams that need clean lodgements and basic support.</p>
+            <div class="price">$490 <small>/ month</small></div>
+            <ul>
+              <li><span class="tick">✓</span> Annual tax return support</li>
+              <li><span class="tick">✓</span> BAS and GST preparation</li>
+              <li><span class="tick">✓</span> Bookkeeping review</li>
+              <li><span class="tick">✓</span> Basic email support</li>
+              <li><span class="tick">✓</span> Due-date reminders</li>
+            </ul>
+            <a class="btn btn-light" href="#contact">Ask About Starter</a>
+          </article>
+
+          <article class="package featured reveal">
+            <span class="label">Most popular</span>
+            <h3>Growth Advisory</h3>
+            <p>For businesses that want proactive reporting, tax planning and monthly guidance.</p>
+            <div class="price">$890 <small>/ month</small></div>
+            <ul>
+              <li><span class="tick">✓</span> Everything in Compliance Essentials</li>
+              <li><span class="tick">✓</span> Monthly management reports</li>
+              <li><span class="tick">✓</span> Quarterly tax planning</li>
+              <li><span class="tick">✓</span> Payroll and super review</li>
+              <li><span class="tick">✓</span> Cash-flow snapshot</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Choose Growth</a>
+          </article>
+
+          <article class="package reveal">
+            <span class="label">Advanced</span>
+            <h3>Virtual CFO Partner</h3>
+            <p>For established teams that need forecasting, KPI tracking and deeper advice.</p>
+            <div class="price">Custom</div>
+            <ul>
+              <li><span class="tick">✓</span> Board-ready reporting pack</li>
+              <li><span class="tick">✓</span> Budget and forecast build</li>
+              <li><span class="tick">✓</span> KPI and margin review</li>
+              <li><span class="tick">✓</span> Strategy meeting rhythm</li>
+              <li><span class="tick">✓</span> Finance and funding support</li>
+            </ul>
+            <a class="btn btn-light" href="#contact">Request a Quote</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-study">
+      <div class="container">
+        <div class="case-card reveal">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Modern Australian city office building" />
+          <div class="case-content">
+            <div class="quote-mark">“</div>
+            <h2>From reactive bookkeeping to a business dashboard the owner checks every Monday.</h2>
+            <p>A growing Melbourne service business came to HarbourStone with late BAS stress, unclear margins and no reliable cash-flow view. We cleaned the accounting file, rebuilt payroll categories, set a monthly close checklist and introduced simple reporting.</p>
+            <p>The owner now receives practical insights before supplier bills, BAS payments and hiring decisions create pressure.</p>
+            <div class="result-grid">
+              <div class="result">
+                <strong>42%</strong>
+                <span>faster monthly reporting cycle</span>
+              </div>
+              <div class="result">
+                <strong>3</strong>
+                <span>major payroll setup issues corrected</span>
+              </div>
+              <div class="result">
+                <strong>12</strong>
+                <span>month cash-flow forecast introduced</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Client words</span>
+          <h2>Designed to build trust before the first call.</h2>
+          <p>Replace these demo testimonials with real reviews from Google, LinkedIn or client feedback to make the website stronger.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p>“The biggest change was clarity. We finally know what our numbers mean each month and what to do before tax time.”</p>
+            <div class="person">
+              <div class="avatar">AM</div>
+              <div>
+                <strong>Amelia Morris</strong>
+                <span>Founder, Northline Studio</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p>“Payroll, BAS and reporting used to be messy. HarbourStone gave us a clean process and answers in plain English.”</p>
+            <div class="person">
+              <div class="avatar">DL</div>
+              <div>
+                <strong>Daniel Lee</strong>
+                <span>Director, Atlas Build Co.</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p>“We moved from spreadsheets to Xero and the monthly dashboard changed how we make hiring and pricing decisions.”</p>
+            <div class="person">
+              <div class="avatar">SK</div>
+              <div>
+                <strong>Sophie King</strong>
+                <span>Owner, Haven Health Group</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-contact" id="contact">
+      <div class="container faq-contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Questions answered</span>
+          <div class="section-heading" style="margin-bottom: 30px;">
+            <h2>Before you book, here is what most business owners ask.</h2>
+            <p>FAQ content is written to reduce hesitation, answer search intent and make the page more useful for visitors.</p>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item active">
+              <button class="faq-question" type="button"><span>Can you help if our accounts are already messy?</span><strong class="plus">+</strong></button>
+              <div class="faq-answer"><p>Yes. We begin with a review of your accounting file, bank reconciliations, payroll, GST coding and unpaid invoices. Then we create a clean-up plan with priorities and fixed next steps.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button"><span>Do you only work with Melbourne businesses?</span><strong class="plus">+</strong></button>
+              <div class="faq-answer"><p>No. This demo firm is based in Melbourne, but the service model supports Australian clients through secure cloud accounting tools, video meetings and digital document collection.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button"><span>Can you manage BAS, GST and payroll together?</span><strong class="plus">+</strong></button>
+              <div class="faq-answer"><p>Yes. BAS, GST, payroll, super and monthly bookkeeping can be handled in one workflow so reports are more accurate and deadlines are easier to manage.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button"><span>Will we understand the reports?</span><strong class="plus">+</strong></button>
+              <div class="faq-answer"><p>Reports are written for business owners, not accountants. We highlight what changed, what matters, what needs attention and what decisions are coming up.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button"><span>Do you offer tax planning before 30 June?</span><strong class="plus">+</strong></button>
+              <div class="faq-answer"><p>Yes. Year-end tax planning can include profit estimates, deductions, asset purchases, super, director loans, stock, debtors and business structure considerations.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="contact-card reveal">
+          <div class="contact-head">
+            <h2>Book a free 20-minute clarity call.</h2>
+            <p>Tell us what is unclear, late, messy or slowing you down. We will suggest the best next step.</p>
+            <div class="location-band">
+              <div class="location-item">
+                <strong>Office</strong>
+                <span>Level 12, 45 Collins Street, Melbourne VIC 3000</span>
+              </div>
+              <div class="location-item">
+                <strong>Phone</strong>
+                <span>+61 3 9123 4588</span>
+              </div>
+              <div class="location-item">
+                <strong>Hours</strong>
+                <span>Mon-Fri, 8:30am-5:30pm AEST</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" action="#" method="post">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" placeholder="+61 4xx xxx xxx" required />
+              </div>
+              <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="field">
+                <label for="service">Main support needed</label>
+                <select id="service" name="service" required>
+                  <option value="">Choose one</option>
+                  <option>Tax return and planning</option>
+                  <option>BAS, GST and bookkeeping</option>
+                  <option>Payroll and super</option>
+                  <option>Virtual CFO and reporting</option>
+                  <option>Cloud accounting migration</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="message">What is happening in the business?</label>
+                <textarea id="message" name="message" placeholder="Example: BAS is always last minute, payroll is messy, or we need better cash-flow visibility."></textarea>
+              </div>
+            </div>
+            <button class="btn btn-dark" type="submit">Send Enquiry</button>
+            <p class="privacy-note">Demo form only. Connect it to your CRM, email marketing platform or website form handler before launching.</p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-card reveal">
+        <div>
+          <h2>Ready for accounting that feels organised, proactive and easy to understand?</h2>
+          <p>Use this homepage as a polished redesign concept for accounting firms that need stronger trust, better service clarity, better lead generation and a modern client-first experience.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="#contact">Book a Call</a>
+          <a class="btn btn-secondary" href="tel:+61391234588">Call +61 3 9123 4588</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <span class="brand-mark">HS</span>
+          <span class="brand-text">
+            <strong>HarbourStone</strong>
+            <span>Advisory &amp; Accounting</span>
+          </span>
+        </a>
+        <p>Modern accounting, tax and advisory support for Australian businesses that want clarity, compliance and practical financial direction.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#services">Tax Returns</a></li>
+          <li><a href="#services">BAS and GST</a></li>
+          <li><a href="#services">Bookkeeping</a></li>
+          <li><a href="#services">Payroll</a></li>
+          <li><a href="#services">Virtual CFO</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#pricing">Plans</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul>
+          <li>Level 12, 45 Collins Street</li>
+          <li>Melbourne VIC 3000, Australia</li>
+          <li><a href="tel:+61391234588">+61 3 9123 4588</a></li>
+          <li><a href="mailto:hello@harbourstoneadvisory.com.au">hello@harbourstoneadvisory.com.au</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 HarbourStone Advisory &amp; Accounting. Demo website content only.</p>
+      <p>Liability limited by a scheme approved under Professional Standards Legislation. Replace with correct firm disclosure.</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('.site-header');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = header.classList.toggle('menu-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        header.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        document.querySelectorAll('.faq-item').forEach((faq) => {
+          if (faq !== item) faq.classList.remove('active');
+        });
+        item.classList.toggle('active');
+      });
+    });
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach((element) => observer.observe(element));
+  </script>
+</body>
+</html>
